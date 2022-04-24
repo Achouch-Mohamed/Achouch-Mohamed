@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Work>
+@{
+    ViewData["Title"] = "Work";
+}
+
+
+    <!-- start work page -->
+    <div class="work-page">
+        <h1 class="title">work(<span>'select'</span>)</h1>
+        <span class="comment">// Some special projects explained in details.</span>
+        @foreach(var obj in Model){
+         <div class="work-item">     
+             <img src="/Uploads/@obj.Workimage" alt="">
+             <div class="work-info">
+                 <h1 class="project-name">@obj.Name</h1>
+                <span class="comment">// BizCommerce</span> 
+                <p class="desc">@obj.Description</p>
+               </div>
+        </div>   
+        }
+          
+   </div>        
+       
+    </div>
+     <!-- end work page -->

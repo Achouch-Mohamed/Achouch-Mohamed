@@ -1,0 +1,35 @@
+﻿@model Asp.netCore.Models.WorkViewModel;
+
+@{
+    ViewData["Title"] = "New";
+}
+<form enctype="multipart/form-data" asp-action="Creatework" asp-controller="Home">
+    <div class="works">
+        <div class="box">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="box">
+            <label asp-for="Description" class="control-label"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="box">
+            <label asp-for="Workimage" class="imgfile"></label>
+            <input asp-for="Workimage" class="custom-file-input" id="customFile">
+
+
+            <span asp-validation-for="Workimage" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="submit" class="btncreatework" />
+            <a asp-action="Index" class="btn btn-sm btn-primary rounded-0 text-uppercase"><i class="fas fa-fast-backward"></i> Back to List</a>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+</form>
